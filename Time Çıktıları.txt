@@ -1,0 +1,75 @@
+Time Çıktıları
+
+Redis İçin:
+
+PS C:\Users\CASPER> Measure-Command {
+>>   1..100 | ForEach-Object {
+>>     curl.exe -s -H "Accept: application/json" `
+>>       "http://localhost:8080/nosql-lab-rd/student_no=2025000001" | Out-Null
+>>   }
+>> }
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 22
+Milliseconds      : 778
+Ticks             : 227783767
+TotalDays         : 0,000263638619212963
+TotalHours        : 0,00632732686111111
+TotalMinutes      : 0,379639611666667
+TotalSeconds      : 22,7783767
+TotalMilliseconds : 22778,3767
+
+
+
+---------------------------------
+
+Hazelcast İçin:
+
+PS C:\Users\CASPER> Measure-Command {
+>>   1..100 | ForEach-Object {
+>>     curl.exe -s -H "Accept: application/json" `
+>>       "http://localhost:8080/nosql-lab-hz/student_no=2025000001" | Out-Null
+>>   }
+>> }
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 22
+Milliseconds      : 692
+Ticks             : 226929341
+TotalDays         : 0,000262649700231481
+TotalHours        : 0,00630359280555556
+TotalMinutes      : 0,378215568333333
+TotalSeconds      : 22,6929341
+TotalMilliseconds : 22692,9341
+
+
+
+---------------------
+
+Mongodb İçin:
+
+PS C:\Users\CASPER> Measure-Command {
+>>   1..100 | ForEach-Object {
+>>     curl.exe -s -H "Accept: application/json" `
+>>       "http://localhost:8080/nosql-lab-mon/student_no=2025000001" | Out-Null
+>>   }
+>> }
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 22
+Milliseconds      : 647
+Ticks             : 226475328
+TotalDays         : 0,000262124222222222
+TotalHours        : 0,00629098133333333
+TotalMinutes      : 0,37745888
+TotalSeconds      : 22,6475328
+TotalMilliseconds : 22647,5328

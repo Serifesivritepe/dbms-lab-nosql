@@ -1,0 +1,145 @@
+PERFORMANS TESTLERİ
+
+Redis İçin Performans Testleri:
+
+C:\Users\CASPER>type redis-ab.txt
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        Werkzeug/3.1.3
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /nosql-lab-rd/student_no=2025000001
+Document Length:        98 bytes
+
+Concurrency Level:      10
+Time taken for tests:   4.893 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      264000 bytes
+HTML transferred:       98000 bytes
+Requests per second:    204.39 [#/sec] (mean)
+Time per request:       48.927 [ms] (mean)
+Time per request:       4.893 [ms] (mean, across all concurrent requests)
+Transfer rate:          52.69 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.4      0       1
+Processing:    14   28   6.3     30      46
+Waiting:        1    8   3.8      7      25
+Total:         14   28   6.3     30      46
+
+Percentage of the requests served within a certain time (ms)
+  50%     30
+  66%     31
+  75%     31
+  80%     32
+  90%     32
+  95%     33
+  98%     41
+  99%     44
+ 100%     46 (longest request)
+
+
+------------------------------------------
+
+Hazelcast İçin Performans Testleri:
+
+C:\Users\CASPER>type hz-ab.txt
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        Werkzeug/3.1.3
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /nosql-lab-hz/student_no=2025000001
+Document Length:        131 bytes
+
+Concurrency Level:      10
+Time taken for tests:   5.201 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      298000 bytes
+HTML transferred:       131000 bytes
+Requests per second:    192.26 [#/sec] (mean)
+Time per request:       52.014 [ms] (mean)
+Time per request:       5.201 [ms] (mean, across all concurrent requests)
+Transfer rate:          55.95 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       2
+Processing:    15   31   8.2     31      94
+Waiting:        3   11   7.7     10      69
+Total:         15   31   8.3     31      94
+
+Percentage of the requests served within a certain time (ms)
+  50%     31
+  66%     31
+  75%     32
+  80%     32
+  90%     32
+  95%     33
+  98%     54
+  99%     80
+ 100%     94 (longest request)
+
+
+-----------------------------------------------------
+
+Mongodb İçin Performans Testleri: 
+
+C:\Users\CASPER>type mongo-ab.txt
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        Werkzeug/3.1.3
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /nosql-lab-mon/student_no=2025000001
+Document Length:        98 bytes
+
+Concurrency Level:      10
+Time taken for tests:   4.993 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      264000 bytes
+HTML transferred:       98000 bytes
+Requests per second:    200.29 [#/sec] (mean)
+Time per request:       49.928 [ms] (mean)
+Time per request:       4.993 [ms] (mean, across all concurrent requests)
+Transfer rate:          51.64 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.4      0       2
+Processing:    14   29   5.4     30      49
+Waiting:        1    9   4.2      8      28
+Total:         14   29   5.4     30      49
+
+Percentage of the requests served within a certain time (ms)
+  50%     30
+  66%     31
+  75%     31
+  80%     32
+  90%     32
+  95%     33
+  98%     43
+  99%     45
+ 100%     49 (longest request)
