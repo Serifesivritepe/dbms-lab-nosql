@@ -1,0 +1,62 @@
+Siege Çıktıları
+
+C:\Users\CASPER>wsl
+
+Redis:
+
+root@DESKTOP-BQJTDM1:/mnt/c/Users/CASPER# siege -v -H "Accept: application/json" -c10 -r100 http://localhost:8080/nosql-lab-rd/student_no=2025000001 > ~/redis-siege.txt
+
+root@DESKTOP-BQJTDM1:/mnt/c/Users/CASPER# cat ~/redis-siege.txt
+{       "transactions":                         1000,
+        "availability":                       100.00,
+        "elapsed_time":                         1.00,
+        "data_transferred":                     0.02,
+        "response_time":                        0.01,
+        "transaction_rate":                  1000.00,
+        "throughput":                           0.02,
+        "concurrency":                          9.98,
+        "successful_transactions":                 0,
+        "failed_transactions":                     0,
+        "longest_transaction":                  0.02,
+        "shortest_transaction":                 0.00
+}
+
+Mongodb:
+
+root@DESKTOP-BQJTDM1:/mnt/c/Users/CASPER# siege -v -H "Accept: application/json" -c10 -r100 http://localhost:8080/nosql-lab-mon/student_no=2025000001 > ~/mongo-siege.txt
+
+root@DESKTOP-BQJTDM1:/mnt/c/Users/CASPER# cat ~/mongo-siege.txt
+{       "transactions":                         1000,
+        "availability":                       100.00,
+        "elapsed_time":                         1.32,
+        "data_transferred":                     0.02,
+        "response_time":                        0.01,
+        "transaction_rate":                   757.58,
+        "throughput":                           0.02,
+        "concurrency":                          9.95,
+        "successful_transactions":                 0,
+        "failed_transactions":                     0,
+        "longest_transaction":                  0.03,
+        "shortest_transaction":                 0.00
+}
+
+Hazelcast:
+
+root@DESKTOP-BQJTDM1:/mnt/c/Users/CASPER# siege -j -H "Accept: application/json" -c10 -r100 \
+  http://localhost:8080/nosql-lab-hz/student_no=2025000001 \
+  > ~/hz-siege.txt
+
+root@DESKTOP-BQJTDM1:/mnt/c/Users/CASPER# cat ~/hz-siege.txt
+{       "transactions":                         1000,
+        "availability":                       100.00,
+        "elapsed_time":                         1.33,
+        "data_transferred":                     0.02,
+        "response_time":                        0.01,
+        "transaction_rate":                   751.88,
+        "throughput":                           0.02,
+        "concurrency":                          9.89,
+        "successful_transactions":                 0,
+        "failed_transactions":                     0,
+        "longest_transaction":                  0.10,
+        "shortest_transaction":                 0.00
+}
